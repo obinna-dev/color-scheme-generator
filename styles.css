@@ -1,0 +1,86 @@
+html,
+body    {
+    font-family: 'Inter', sans-serif;
+    margin: 0, auto;
+    font-size: 16;
+}
+
+.app-container  {
+    background-color: #1F2937;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.color-picker-menu  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0.5rem;
+    background-color: #1F2937;
+}
+
+.color-picker-menu #seed-color-picker   {
+    border: 0;
+    cursor: pointer;
+    height: 2rem;
+}
+
+.color-picker-menu #select-color-scheme {
+    flex: 0.8;
+    padding: 0.4rem;
+    background-color: #1F2937;
+    color: #D5D4D8;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border: solid 1px #D1D5DB;
+}
+
+button  {
+    background-color: #3D4B60;
+    border: none;
+    padding: 0.7rem 0.7rem;
+    border-radius: 0.2rem;
+    color: #D5D4D8;
+    cursor: pointer;
+}
+button:hover    {
+    background-color: #495a73;
+}
+
+#color-bars-container   {
+    display: flex;
+}
+
+.color-bar  {
+    width: 20%;
+    height: 350px;
+}
+
+.color-bar.one {
+    background-color: #F55A5A;
+}
+.color-bar.two {
+    background-color: #2B283A;
+}
+.color-bar.three {
+    background-color: #FBF3AB;
+}
+.color-bar.four {
+    background-color: #AAD1B6;
+}
+.color-bar.five {
+    background-color: #A626D3;
+}
+
+#color-hex-container    {
+    display: flex;
+}
+.color-hex  {
+    width: 20%;
+    padding: 0.5rem 0;
+    color: #D5D4D8;
+}
+.color-hex p    {
+    font-size: 0.75rem;
+    text-align: center;
+}
