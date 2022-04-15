@@ -1,17 +1,24 @@
-// const seedColor = document.getElementById("seed-color-picker").value
-// console.log("seedColor")
-
-
-// fetch("https://www.thecolorapi.com/scheme")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-
 let seedColor = ""
 let selectedColorScheme = ""
 let colorsArr = []
+let colorSchemeHtml = ""
+const colorPickerForm = document.getElementById("color-picker-form")
 
+function renderColors() {
+    
+    for (let color of colorsArr) {
+        colorSchemeHtml += `
+        <div id="color-bar" class="color-bar">
+            <img src="${color.image.bare}" alt="${color.name.value} HexCode ${color.name.closest_named_hex}">
+            <p>colors go here</p>
+        </div>
+        `
+        console.log(`The color is ${color.hex.value} and you can view the image here ${color.image.bare}`)
+    }
+    document.getElementById("color-bars-container").innerHTML = colorSchemeHtml
+}
 
-const colorPickerForm = document.getElementById("color-picker-form").addEventListener("submit", (e) => {
+colorPickerForm.addEventListener("submit", (e) => {
     e.preventDefault()
     seedColor = document.getElementById("seed-color-picker").value.replace("#", "")
     selectedColorScheme = document.getElementById("select-color-scheme").value
@@ -23,29 +30,7 @@ const colorPickerForm = document.getElementById("color-picker-form").addEventLis
         .then(data => {
             console.log(data.colors)
             colorsArr = data.colors
-
-            for (let color of colorsArr) {
-                colorSchemeHtml += `
-                
-                `
-                console.log(`The color is ${color.hex.value} and you can view the image here ${color.image.bare}`)
-
-            }
+            renderColors()
+            
         })
-    
 })
-
-
-
-
-// {"colors": [
-//     {
-//      "hex": {"value": "#000000"}, "image": {"bare": "url"}
-//     },
-//     {
-//      "hex": {"value": "#fff"}, "image": {"bare": "url"}
-//     }
-//   ]
-//  }
-// loop through colors array and log out the hex and image key value pairs in the object for each loop
-// image has to be logged out in html backticks string and pushed to DOM
