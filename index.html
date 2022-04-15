@@ -14,20 +14,22 @@
     <h1>Color Scheme Generator</h1>
     <h2>Generate colors</h2>
     <div class="app-container">
-        <div class="color-picker-menu">
-            <input type="color" name="seed-color-picker" id="seed-color-picker">
-            <select name="select" id="select-color-scheme">
-                <option value="color-scheme">Monochrome</option>
-                <option value="color-scheme">Monochrome-dark</option>
-                <option value="color-scheme">Monochrome-light</option>
-                <option value="color-scheme">Analogic</option>
-                <option value="color-scheme">Complement</option>
-                <option value="color-scheme">Analogic-complement</option>
-                <option value="color-scheme">Triad</option>
-                <option value="color-scheme">Quad</option>
-            </select>
-            <button>Get color scheme</button>
-        </div>
+        <form action="" id="color-picker-form">
+            <div class="color-picker-menu">
+                <input type="color" name="seed-color-picker" id="seed-color-picker">
+                <select name="select" id="select-color-scheme">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome (dark)</option>
+                    <option value="monochrome-light">Monochrome (light)</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                <button>Get color scheme</button>
+            </div>
+        </form>
         <div id="color-bars-container">
             <div id="color-bar" class="color-bar one"></div>
             <div id="color-bar" class="color-bar two"></div>

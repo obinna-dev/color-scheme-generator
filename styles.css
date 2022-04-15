@@ -56,6 +56,10 @@ button:hover    {
     height: 350px;
 }
 
+.color-bar:hover  {
+    border: solid 3px rgba(255, 255, 255, 0.356);
+}
+
 .color-bar.one {
     background-color: #F55A5A;
 }
@@ -79,6 +83,9 @@ button:hover    {
     width: 20%;
     padding: 0.5rem 0;
     color: #D5D4D8;
+}
+.color-hex:hover  {
+    background-color: rgba(255, 255, 255, 0.162);
 }
 .color-hex p    {
     font-size: 0.75rem;
