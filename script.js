@@ -36,3 +36,4 @@ colorPickerForm.addEventListener("submit", (e) => {
             renderColors()
         })
 })
+

@@ -58,6 +58,7 @@ button:hover    {
 .color-bar  {
     width: 20%;
     height: 350px;
+    border: solid 3px transparent
 }
 
 .color-bar:hover  {
